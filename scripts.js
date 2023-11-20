@@ -2,24 +2,23 @@ document.addEventListener("DOMContentLoaded", function () {
   const mainContent = document.querySelector(".content");
 
   document.getElementById("btnApresentacao").addEventListener("click", function () {
-    scrollToSection(0);
-  });
-
-  document.getElementById("btnHistoria").addEventListener("click", function () {
-    scrollToSection(1);
+    scrollToSection("apresentacao");
   });
 
   document.getElementById("btnEducacao").addEventListener("click", function () {
-    scrollToSection(2);
+    scrollToSection("educacao");
   });
 
   document.getElementById("btnHabilidades").addEventListener("click", function () {
-    scrollToSection(3);
+    scrollToSection("habilidades");
   });
 
-  function scrollToSection(sectionIndex) {
-    const sections = document.querySelectorAll(".section");
-    const targetSection = sections[sectionIndex];
+  document.getElementById("btnProjetos").addEventListener("click", function () {
+    scrollToSection("projetos");
+  });
+
+  function scrollToSection(sectionId) {
+    const targetSection = document.getElementById(sectionId);
 
     mainContent.scrollLeft = targetSection.offsetLeft;
   }
