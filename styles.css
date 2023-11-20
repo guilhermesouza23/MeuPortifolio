@@ -1,0 +1,32 @@
+/* Reset de estilos para uma base consistente */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em;
+}
+
+section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em;
+}
+
+/* Adicione mais estilos conforme necessário */
