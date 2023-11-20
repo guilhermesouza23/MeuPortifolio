@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const mainContent = document.querySelector("main");
+  const mainContent = document.getElementById("mainContent");
 
   document.getElementById("btnApresentacao").addEventListener("click", function () {
     loadContent("apresentacao.html");
