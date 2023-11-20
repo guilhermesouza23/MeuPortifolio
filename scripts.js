@@ -1,35 +1,29 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const mainContent = document.getElementById("mainContent");
+  const mainContent = document.querySelector(".content");
 
   document.getElementById("btnApresentacao").addEventListener("click", function () {
-    loadContent("apresentacao.html");
+    scrollToSection(0);
   });
 
   document.getElementById("btnHistoria").addEventListener("click", function () {
-    loadContent("historia.html");
+    scrollToSection(1);
   });
 
   document.getElementById("btnEducacao").addEventListener("click", function () {
-    loadContent("educacao.html");
+    scrollToSection(2);
   });
 
   document.getElementById("btnHabilidades").addEventListener("click", function () {
-    loadContent("habilidades.html");
+    scrollToSection(3);
   });
 
-  document.getElementById("btnProjetos").addEventListener("click", function () {
-    loadContent("projetos.html");
-  });
+  function scrollToSection(sectionIndex) {
+    const sections = document.querySelectorAll(".section");
+    const targetSection = sections[sectionIndex];
 
-  document.getElementById("btnContato").addEventListener("click", function () {
-    loadContent("contato.html");
-  });
-
-  function loadContent(page) {
-    fetch(page)
-      .then(response => response.text())
-      .then(html => {
-        mainContent.innerHTML = html;
-      });
+    mainContent.scrollTo({
+      left: targetSection.offsetLeft,
+      behavior: 'smooth'
+    });
   }
 });
