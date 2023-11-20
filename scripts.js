@@ -1,24 +1,35 @@
-// Se você decidir adicionar funcionalidades dinâmicas, este é o lugar para fazê-lo
-// Por exemplo, se você quiser uma rolagem suave ao clicar em links internos
+document.addEventListener("DOMContentLoaded", function () {
+  const mainContent = document.querySelector("main");
 
-document.addEventListener('DOMContentLoaded', function () {
-    const internalLinks = document.querySelectorAll('a[href^="#"]');
-    
-    internalLinks.forEach(link => {
-        link.addEventListener('click', smoothScroll);
-    });
+  document.getElementById("btnApresentacao").addEventListener("click", function () {
+    loadContent("apresentacao.html");
+  });
 
-    function smoothScroll(e) {
-        e.preventDefault();
+  document.getElementById("btnHistoria").addEventListener("click", function () {
+    loadContent("historia.html");
+  });
 
-        const targetId = this.getAttribute('href').substring(1);
-        const targetElement = document.getElementById(targetId);
+  document.getElementById("btnEducacao").addEventListener("click", function () {
+    loadContent("educacao.html");
+  });
 
-        if (targetElement) {
-            window.scrollTo({
-                top: targetElement.offsetTop,
-                behavior: 'smooth'
-            });
-        }
-    }
+  document.getElementById("btnHabilidades").addEventListener("click", function () {
+    loadContent("habilidades.html");
+  });
+
+  document.getElementById("btnProjetos").addEventListener("click", function () {
+    loadContent("projetos.html");
+  });
+
+  document.getElementById("btnContato").addEventListener("click", function () {
+    loadContent("contato.html");
+  });
+
+  function loadContent(page) {
+    fetch(page)
+      .then(response => response.text())
+      .then(html => {
+        mainContent.innerHTML = html;
+      });
+  }
 });
