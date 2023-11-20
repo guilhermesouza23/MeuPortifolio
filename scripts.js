@@ -21,9 +21,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const sections = document.querySelectorAll(".section");
     const targetSection = sections[sectionIndex];
 
-    mainContent.scrollTo({
-      left: targetSection.offsetLeft,
-      behavior: 'smooth'
-    });
+    mainContent.scrollLeft = targetSection.offsetLeft;
   }
 });
