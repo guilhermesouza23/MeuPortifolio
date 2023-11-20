@@ -2,7 +2,7 @@ body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  overflow-x: hidden; /* Evita a barra de rolagem horizontal */
+  overflow-x: hidden;
 }
 
 .container {
@@ -21,14 +21,27 @@ header {
 .content {
   display: flex;
   flex-wrap: nowrap;
-  overflow-x: auto; /* Permite a rolagem horizontal */
+  overflow-x: auto;
   padding: 20px;
+  scroll-snap-type: x mandatory;
 }
 
 .section {
   flex: 0 0 auto;
   width: 80%;
   margin-right: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  scroll-snap-align: start;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.section:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 footer {
@@ -36,5 +49,5 @@ footer {
   color: white;
   text-align: center;
   padding: 10px;
-  margin-top: auto; /* Empurra para o final da página */
+  margin-top: auto;
 }
