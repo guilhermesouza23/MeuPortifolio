@@ -21,5 +21,19 @@ document.addEventListener("DOMContentLoaded", function () {
     const targetSection = document.getElementById(sectionId);
 
     mainContent.scrollLeft = targetSection.offsetLeft;
+
+    document.getElementById("submitBtn").addEventListener("click", function () {
+  const form = document.getElementById("contactForm");
+  const formData = new FormData(form);
+
+  // Aqui você pode enviar os dados para o seu servidor ou enviar por e-mail usando um serviço backend
+  // Por enquanto, vamos apenas exibir os dados no console para fins de demonstração
+  for (const pair of formData.entries()) {
+    console.log(pair[0] + ": " + pair[1]);
+  }
+
+  // Limpar o formulário após enviar
+  form.reset();
+});
   }
 });
