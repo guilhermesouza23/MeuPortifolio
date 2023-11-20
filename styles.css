@@ -1,32 +1,38 @@
-/* Reset de estilos para uma base consistente */
-body, h1, h2, p {
-    margin: 0;
-    padding: 0;
-}
-
 body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 header {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 1em;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
 }
 
-section {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
+nav {
+  background-color: #eee;
+  padding: 10px;
+  text-align: center;
+}
+
+button {
+  margin: 5px;
+  padding: 8px;
+  cursor: pointer;
+}
+
+main {
+  padding: 20px;
 }
 
 footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 1em;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
-
-/* Adicione mais estilos conforme necessário */
