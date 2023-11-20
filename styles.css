@@ -51,3 +51,35 @@ footer {
   padding: 10px;
   margin-top: auto;
 }
+
+#contactForm {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#contactForm label {
+  display: block;
+  margin-top: 10px;
+}
+
+#contactForm input,
+#contactForm textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+#contactForm button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#contactForm button:hover {
+  background-color: #45a049;
+}
