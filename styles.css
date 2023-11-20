@@ -2,29 +2,33 @@ body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
+  overflow-x: hidden; /* Evita a barra de rolagem horizontal */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 header {
   background-color: #333;
   color: white;
   text-align: center;
-  padding: 10px;
-}
-
-nav {
-  background-color: #eee;
-  padding: 10px;
-  text-align: center;
-}
-
-button {
-  margin: 5px;
-  padding: 8px;
-  cursor: pointer;
-}
-
-main {
   padding: 20px;
+}
+
+.content {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto; /* Permite a rolagem horizontal */
+  padding: 20px;
+}
+
+.section {
+  flex: 0 0 auto;
+  width: 80%;
+  margin-right: 20px;
 }
 
 footer {
@@ -32,7 +36,5 @@ footer {
   color: white;
   text-align: center;
   padding: 10px;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
+  margin-top: auto; /* Empurra para o final da página */
 }
